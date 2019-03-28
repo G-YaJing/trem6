@@ -5,10 +5,10 @@
                       <img :src="options.frontImg" alt="">
                     </dt>
                     <dd>
-                      <p class="size">{{options.areaName}}</p>
+                      <p class="size">{{options.name}}</p>
 
                       <div class="price">
-                        <span>￥114/人</span>
+                        <span>￥{{options.avgPrice}}/人</span>
                         <span>鲁谷</span>
                       </div>
                       <div class="shuoming">

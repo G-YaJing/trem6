@@ -2,28 +2,11 @@
     <div class="warp">
         <header>
           <i class="icon iconfont icon-xiangzuo"></i>
-            <input type="text" class="inp" placeholder="输入商家名称" >
+            <input type="text" class="inp" placeholder="输入商家名称"  @keyup.enter="source($event.target.value)"   >
             <i class="icon iconfont icon-wode-xuanzhong"></i>
         </header>
         <section>
-            <div class="nav">
-                <div class="navshop">
-                  <span>全部项目</span>
-                  <i class="icon iconfont icon-triangle-down"></i>
-                </div>
-                <div class="navshop">
-                  <span>附件商家</span>
-                  <i class="icon iconfont icon-triangle-down"></i>
-                </div>
-                <div class="navshop">
-                  <span>智能排序</span>
-                  <i class="icon iconfont icon-triangle-down"></i>
-                </div>
-                <div class="navshop">
-                  <span>筛选</span>
-                  <i class="icon iconfont icon-triangle-down"></i>
-                </div>
-            </div>
+          <item :list="content"></item>
             <div class="content">
                <list  v-for="(item,i) in  content" :key="i" :options="item"> </list>
              <!--  <dl>
@@ -53,20 +36,35 @@
 <script>
 import "./fonts/iconfont.css"
 import list from './components/index.vue'
+import item from './components/itemCom.vue'
 export default {
   data(){
     return {
-      content:[]
+      content:[],
+      val:''
     }
   },
-    created(){
+    created(){//渲染
       this.$axios('/api/app').then(data=>{
         this.content=data.data[0].data.poiList.poiInfos;
         console.log(this.content);
       })
     },
-    components:{
-      list
+    components:{//挂在子组件
+      list,
+      item
+    },
+    //写方法
+    methods:{
+      source(val){
+        this.$axios('/api/app').then(data=>{
+        this.content=data.data[0].data.poiList.poiInfos;
+        this.content= this.content.filter(el=>{
+       return el.name.indexOf(val)!=-1;
+      })
+      })
+     
+      }
     }
 }
 </script>
@@ -77,6 +75,7 @@ export default {
       margin: 0;
       list-style: none;
       text-decoration: none;
+      
     }
     html,body{
       width: 100%;
@@ -85,7 +84,9 @@ export default {
     .warp{
       width: 100%;
       height: 100%;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+     
     }
     header{
       background: rgb(238, 238, 238);
@@ -96,6 +97,7 @@ export default {
       justify-content: space-between;
       width: 100%;
       height: 50px;
+    
     }
     .inp{
       width: 78%;
@@ -104,21 +106,19 @@ export default {
       background: rgb(195, 195, 195);
       border-radius: 30px;
       outline: none;
-      color: #fff;
+      color: #000;
       text-align: center;
+      font-size: 16px;
     }
     .icon-wode-xuanzhong{
       font-size: 20px;
     }
     section{
       width: 100%;
+      flex: 1;
+      overflow: auto;
     }
-    .nav{
-      width: 100%;
-      height: 50px;
-      display: flex;
-      border-bottom: 1px solid #ccc;
-    }
+  
     .navshop{
       height: 50px;
       width: 25%;
@@ -127,12 +127,14 @@ export default {
     }
     .content{
       width: 100%;
-  
+    margin-top: 50px;
     }
     dl {
       width: 100%;
       display: flex;
       margin-top: 10px;
+  
+      
     }
     dl dd{
       flex: 1;
