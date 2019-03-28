@@ -8,15 +8,18 @@
             <p><span>{{item.avgScore}}</span>月销售<span>{{item.avgPrice}}</span>单</p>
             <div><p>{{item.distance}}</p></div>
             <div><span>{{item.areaName}}</span>/<span>{{item.cateName}}</span></div>
-            <div><i class="icon iconfont icon-weixin"></i>
-            <i class="icon iconfont icon-zhifubao"></i></div>
+            <spans :avgScore="item.avgScore"></spans>
         </dd>
     </dl>
 </template>
 
 <script>
+import spans from "./spans.vue"
 export default {
-    props:["item"]
+    props:["item"],
+    components:{
+        spans
+    }
 }
 </script>
 

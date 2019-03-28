@@ -6,10 +6,13 @@
         </myheader>
         <main>
             <ul>
-                <li @click="datasum">综合排序</li>
-                <li @click="sort1">升序</li>
-                <li @click="sort2">降序</li>
+                <li @click="datasum">综合排序<i class="icon iconfont icon-xiangxia"></i></li>
+                <li @click="sort1" :class="{active:open}">升序 <i :class="['icon','open=false?icon-xiangxia:icon-QQ']"></i></li>
+                <li @click="sort2" :class="{active:ind}">降序<i class="icon iconfont icon-xiangxia"></i></li>
             </ul>
+            <div>
+                <input type="text" placeholder="请输入要搜索的东西" v-model="text" @keyup.enter="change">
+            </div>
             <mydl v-for="(item,i) in list"
             :key="i"
             :item="item"
@@ -26,7 +29,10 @@ import mydl from "./mydl.vue"
 export default {
     data(){
         return{
-            list:[]
+            list:[],
+            open:false,
+            ind:false,
+            text:""
         }
     },
     created(){
@@ -37,18 +43,28 @@ export default {
     },
     methods:{
         datasum(){
-            this.$ajax("/api/list").then(res=>{
+            this.$ajax.get("/api/list").then(res=>{
                 this.list=res.data[0].data.poiList.poiInfos;
+              console.log(this.list);
             })
         },
         sort1(){
           let sortnum=this.list.sort((a,b)=>{
               return  a.avgPrice-b.avgPrice
             })
+            this.open=!this.open
         },
          sort2(){
           let sortnum=this.list.sort((a,b)=>{
               return  b.avgPrice-a.avgPrice
+            })
+           this.ind=!this.ind
+        },
+        change(){
+            this.$ajax.post("/api/post",{
+                title:this.text
+            }).then(res=>{
+               this.list=res.data;
             })
         }
     }
@@ -56,5 +72,7 @@ export default {
 </script>
 
 <style>
-
+.active{
+    color: skyblue;
+}
 </style>
