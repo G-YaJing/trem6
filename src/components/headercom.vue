@@ -1,14 +1,14 @@
 <template>
     <header>
         <slot name="left"></slot>
-        <input type="text">
+        <input type="text" @keyup.enter="$emit('searchEvent',$event.target.value)">
         <span>搜索</span>
     </header>
 </template>
 
 <script>
 export default {
-
+    props:['value']
 }
 </script>
 
