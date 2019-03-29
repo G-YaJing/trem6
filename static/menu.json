@@ -1,0 +1,7 @@
+{
+    "code":0,
+    "menu":[{"name":"折扣","value":"zhekou","menuid":0},
+        {"name":"买赠","value":"maizeng","menuid":1},
+        {"name":"新品","value":"xinpin","menuid":2},
+        {"name":"炸鸡","value":"zhaji","menuid":3}]
+}

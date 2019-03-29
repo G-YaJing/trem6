@@ -1,0 +1,96 @@
+{
+    "code": 0,
+    "data": {
+        "zhekou": {
+            "title": "折扣",
+            "icon": "http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+            "flag": false,
+            "listtitle": "无骨炸鸡双排",
+            "list": [{
+                "shopImg": "http://img.leha.com/editor/552b258700a03.jpg",
+                "hot": "蒜香伴+原味",
+                "num": "9块鸡肉+9块鸡肉",
+                "month": "2",
+                "bars": "0",
+                "pic": "80",
+                "icons": "iconfont icon-jia"
+            }, {
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "蒜香伴+原味",
+                "num": "9块鸡肉+9块鸡肉",
+                "month": "2",
+                "bars": "0",
+                "pic": "80",
+                "icons": "iconfont icon-jia"
+            }, {
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "蒜香伴+原味",
+                "num": "9块鸡肉+9块鸡肉",
+                "month": "2",
+                "bars": "0",
+                "pic": "80",
+                "icons": "iconfont icon-jia"
+            }]
+        },
+        "maizeng": {
+            "flag": false,
+            "title": "买赠",
+            "listtitle": "无骨炸鸡双排",
+            "list": [{
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "孜然拌粉+原味",
+                "num": "9块鸡肉",
+                "month": 2,
+                "bars": 0,
+                "pic": 60,
+                "icons": "iconfont icon-jia"
+            }, {
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "孜然拌粉+原味",
+                "num": "9块鸡肉",
+                "month": 2,
+                "bars": 0,
+                "pic": 60,
+                "icons": "iconfont icon-jia"
+            }, {
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "孜然拌粉+原味",
+                "num": "9块鸡肉",
+                "month": 2,
+                "bars": 0,
+                "pic": 60,
+                "icons": "iconfont icon-jia"
+            }]
+        },
+        "xinpin": {
+            "flag": false,
+            "title": "新品",
+            "listtitle": "无骨炸鸡双排",
+            "list": [{
+                "shopImg": "http://img2.imgtn.bdimg.com/it/u=3981183054,4217565312&fm=11&gp=0.jpg",
+                "hot": "甜辣拌粉+原味",
+                "num": "9块鸡肉+9块鸡肉",
+                "month": 2,
+                "bars": 2,
+                "pic": 50,
+                "icons": "iconfont icon-jia"
+            }, {
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "甜辣拌粉+原味",
+                "num": "9块鸡肉+9块鸡肉",
+                "month": 2,
+                "bars": 5,
+                "pic": 50,
+                "icons": "iconfont icon-jia"
+            }, {
+                "shopImg": "http://imgsrc.baidu.com/imgad/pic/item/11385343fbf2b211509c275ac08065380cd78e70.jpg",
+                "hot": "甜辣拌粉+原味",
+                "num": "9块鸡肉+9块鸡肉",
+                "month": 2,
+                "bars": 5,
+                "pic": 50,
+                "icons": "iconfont icon-jia"
+            }]
+        }
+    }
+}

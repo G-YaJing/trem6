@@ -1,22 +1,41 @@
 <template>
   <div id="app">
-    <Header />
-    <Section />
-    <!-- <router-view/> -->
+    <Headers/>
+    <Navs/>
+    <Content :Menu="Dates" :option="List"/>
+    <Footer/>
+    <Mork/>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
-
+  data() {
+    return {
+      List: [],
+      flag: false,
+      Dates: []
+    };
+  },
+  created() {
+    axios.get("/api/menu").then(({ data }) => {
+      this.Dates = data.message.menu;
+    });
+    axios.get("/api/list").then(({ data }) => {
+      this.List = data.message.data;
+    });
+  },
+  mounted() {}
 };
 </script>
 
 <style>
-*{
+* {
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -25,8 +44,6 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -37,5 +54,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 </style>

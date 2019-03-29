@@ -3,7 +3,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-    // const Data = require('../data.js')
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
@@ -49,16 +48,16 @@ module.exports = {
                 }
             },
             {
+                test: /\.(sass|scss)/,
+                use: ['style', 'css', 'sass']
+            },
+            {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
                     name: utils.assetsPath('media/[name].[hash:7].[ext]')
                 }
-            },
-            {
-                test: /.(sass|scss)/,
-                use: ['style', 'css', 'sass']
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

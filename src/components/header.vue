@@ -1,11 +1,11 @@
 <template>
   <header>
-    <i class="iconfont icon-fanhui"></i>
+    <i class="iconfont icon-left"></i>
     <span>
-      <i class="iconfont icon-sousuo1"></i>
-      <input type="text" placeholder="输入商家名、品类或商圈">
+    <i class="iconfont icon-magnifier"></i>
+    <input type="text" placeholder="请输入商户名称">
     </span>
-    <i class="iconfont icon-denglu1"></i>
+    <i class="iconfont icon-gerenyonghutouxiang"></i>
   </header>
 </template>
 
@@ -16,35 +16,28 @@ export default {};
 <style scoped lang="scss">
 header {
   width: 100%;
-  height: 50px;
+  height: 44px;
   display: flex;
-  background: #fafafa;
   align-items: center;
-  span {
-    flex: 1;
-    height: 36px;
-    width: 100%;
-    background: #ebeced;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    input {
-      border: none;
-      outline: none;
-      background: none;
-    }
-    i {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-  }
-  i {
+  flex-shrink: 0;
+  i{
     width: 60px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  span{
+    flex:1;
+    display: flex;
+    border-radius: 50px;
+      height: 38px;
+    background: #eee;
+    input{
+      border: none;
+      background: #eee;
+      outline: none;
+    }
   }
 }
 </style>

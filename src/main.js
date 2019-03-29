@@ -3,21 +3,24 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-import './assets/iconfont/iconfont.css'
-Vue.component('Header', () =>
-    import ('./components/header.vue'))
-Vue.component('Section', () =>
-    import ('./components/section.vue'))
-
+import '../static/icon/iconfont.js'
+import '../static/icon/iconfont.css'
 Vue.config.productionTip = false
-
-/* eslint-disable no-new */
+Vue.component('Headers', () =>
+    import ('./components/header.vue'))
+Vue.component('Navs', () =>
+    import ('./components/navs.vue'))
+Vue.component('Content', () =>
+    import ('./components/countent.vue'))
+Vue.component('Footer', () =>
+    import ('./components/footer.vue'))
+Vue.component('Mork', () =>
+    import ('./components/mask.vue'))
+Vue.prototype.$Bus = new Vue()
+    /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
-    components: {
-        App
-    },
+    components: { App },
     template: '<App/>'
 })
