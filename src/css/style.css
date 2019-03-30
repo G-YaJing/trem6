@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body,
+html,
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 120px;
+}
+
+.pp {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header ul {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.header input {
+    /* width: 250px; */
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background: #ccc;
+    text-align: center;
+}
+
+.active {
+    border-bottom: 1px solid orange;
+    width: 10px;
+    color: black;
+}
+
+.img {
+    width: 100%;
+    height: 91px;
+    margin-top: 5px;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    margin-top: 55px;
+}
+
+.left {
+    width: 25%;
+    background: #f6f8f7;
+}
+
+.right {
+    width: 75%;
+    height: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.right dl {
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+
+.right dl dt img {
+    width: 80%;
+    height: 60%;
+}
+
+.right dl {
+    width: 100%;
+}
+
+.right dl dt {
+    width: 40%;
+}
+
+.right dl dd {
+    width: 60%;
+    margin-left: 15px;
+}
+
+.yanse {
+    display: inline-block;
+    color: red;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    background: orange;
+    border-radius: 50%;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.left ul li {
+    width: 100px;
+    height: 50px;
+    background: #f6f8f7;
+    margin-top: 5px;
+    line-height: 50px;
+}
+
+.jie {
+    width: 100%;
+    height: 50px;
+    background: #3f3f3d;
+    border-radius: 50px;
+    display: flex;
+}
+
+.bai {
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 5px;
+}
+
+.jie img {
+    width: 50px;
+    height: 60px;
+    margin-left: 60px;
+}
+
+.song {
+    margin: 10px 30px;
+    color: #ccc;
+}

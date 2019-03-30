@@ -1,39 +1,34 @@
 <template>
-    <header>
-        <slot name="left"></slot>
-        <input type="text">
-        <span>搜索</span>
-    </header>
+  <div class="header">
+    <div class="pp">
+      <span class="icon iconfont icon-xiangzuo"></span>
+      <input type="text" placeholder="请输入商品名称">
+      <span class="icon iconfont icon-pingfen"></span>
+      <p class="icon iconfont icon-gengduo"></p>
+    </div>
+    <ul>
+      <li class="active">点菜</li>
+      <li>评价</li>
+      <li>商家</li>
+      <li>好友拼单</li>
+    </ul>
+    <div class="swiper-container img">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"> <img src="../img/img.jpg" alt></div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="img">
+   
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
 
-}
+};
 </script>
 
-<style scoped>
-    header{
-        height: 50px;
-        width: 100%;
-        background:Red;
-        line-height: 50px;
-        font-size:20px;
-        display: flex;
-    }
-    header input{
-        flex:1;
-        height: 30px;
-        margin-top: 8px;
-        margin-left: 2px;
-    }
-    header i{
-        width: 40px;
-        text-align: center;
-        font-size:30px;
-    }
-    header span{
-        width: 50px;
-        text-align: center
-    }
+<style>
 </style>

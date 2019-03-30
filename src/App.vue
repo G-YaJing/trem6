@@ -1,43 +1,21 @@
 <template>
   <div id="app">
-    <Headercom>
-        <i slot="left" class="iconfont icon-return"></i>
-    </Headercom>
-    <Listcom></Listcom>
-    <Footercom></Footercom>
+    <!--  输出 -->
+    <headercom></headercom>
+    <sectioncom></sectioncom>
+        <listercom></listercom>
   </div>
 </template>
 
 <script>
-import Headercom from './components/headercom';
-import Footercom from "./components/footercom";
-import Listcom from "./components/listcom";
+import headercom from "./components/headerCom";
+import sectioncom from "./components/sectionCom";
+import listercom from "./components/listercom";
 export default {
-  name: 'App',
-  components: {
-    Headercom,
-    Footercom,
-    Listcom
-  }
-}
+  name: "App",
+  components: { headercom, sectioncom,listercom }
+};
 </script>
 
 <style>
-*{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        text-decoration: none
-    }
-    html,body{
-      width: 100%;
-      height: 100%;
-    }
-    #app{
-      display: flex;
-      flex-direction: column
-    }
-    Listcom{
-      flex:1;
-    }
 </style>
